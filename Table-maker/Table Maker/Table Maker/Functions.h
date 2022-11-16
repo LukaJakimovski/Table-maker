@@ -142,3 +142,17 @@ void DrawTable() {
         index += increment;
     } while (index <= tableRowLast);
 }
+void DrawAppleFallDistance() {
+    // Gravity = 9.81m/s^2    Gravity * s^2 = d
+    // But we need to take the average velocity over time so /2 to get the average between two points    
+    // The Equation basically just takes two points in time finds the average velocity and multiplies it by time elapsed
+    // Ex, V at X=0 is 0    V at X=1 is 9.81 the average is (0 + 9.81)/2 = 4.905  this works for any two points
+    // So : f(x) = 9.81x^2/2
+    std::cout << "\n\tTime\t|\tDistance\n\t \t|\n";
+    int index = 0;
+    do
+    {
+        std::cout << "\t" << index << "\t|\t" << 9.81*pow(index,2)/2 << "\n";
+        index++;
+    } while (index <= 100);
+}
