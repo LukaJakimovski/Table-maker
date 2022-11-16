@@ -21,7 +21,7 @@ int main()
         solveEquation();
     }
     else {
-        std::cout << "Error: Invalid Mode";
+        DrawAppleFallDistance();
     }
     std::cin >> mode;
 }
